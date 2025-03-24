@@ -1,1 +1,1 @@
-# Rick-Morty-Intern-Task-
+# Intern-Task
