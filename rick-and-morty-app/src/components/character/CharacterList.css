@@ -86,7 +86,7 @@
   padding: 15px;
   border-radius: 8px;
   border: 2px solid #97ce4c;
-  width: 95%;
+  width: 100%;
   box-sizing: border-box;
   animation: portal-glow 3s infinite alternate;
 }

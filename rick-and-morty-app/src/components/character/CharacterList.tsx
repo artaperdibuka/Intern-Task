@@ -205,7 +205,7 @@ const CharacterList = ({ isInfiniteScroll }: Props) => {
         <div className="search-container">
           <input
             type="text"
-            placeholder="Search characters..."
+            placeholder={lang.searchPlaceholder || "Search characters..."}
             value={searchQuery}
             onChange={handleSearchChange}
             className="search-input"
