@@ -1,0 +1,145 @@
+.footer {
+  border-top: 1px solid #42c45499;
+  background-color: #39393956;
+  color: #b8e994;
+  padding: 20px 0;
+  font-family: "Luckiest Guy", sans-serif;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  box-shadow: 0 0 10px #42c45499;
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+  position: relative;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 200px;
+  text-align: left;
+}
+
+.footer-social h3 {
+  font-size: clamp(16px, 2vw, 18px);
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-left: 45px;
+}
+
+.social-icons a {
+  font-size: clamp(20px, 3vw, 24px);
+  color: #b8e994;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #97ce4c;
+  transform: scale(1.2);
+}
+
+.footer-small-logo {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.footer-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-small-logo img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-image {
+  flex: 1;
+  min-width: 150px;
+  text-align: right;
+}
+
+.footer-image img {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: -70px;
+}
+
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  font-size: clamp(12px, 2vw, 14px);
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+@media (max-width: 900px) {
+  .footer-content {
+    justify-content: center;
+  }
+
+  .footer-social,
+  .footer-center,
+  .footer-image {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .social-icons {
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  .footer-small-logo img {
+    margin-left: 0;
+  }
+
+  .footer-image img {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-social,
+  .footer-center,
+  .footer-image {
+    min-width: 100%;
+  }
+
+  .footer-image {
+    order: 3;
+  }
+}
