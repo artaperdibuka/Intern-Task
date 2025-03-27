@@ -6,7 +6,7 @@ import "../character/CharacterList.css";
 import { useLanguage } from "../../translations/LanguageContext";
 import languages from "../../translations/languages";
 import { PiEyesLight } from "react-icons/pi";
-import { FaHeartbeat} from "react-icons/fa";
+import { FaHeartbeat } from "react-icons/fa";
 import { GiPortal, GiSkullCrossedBones } from "react-icons/gi";
 import { GoQuestion } from "react-icons/go";
 
@@ -29,14 +29,18 @@ const CharacterList = ({ isInfiniteScroll }: Props) => {
 
 
 
+
   const { loading, error, data } = useQuery(GET_CHARACTERS, {
     variables: {
       page,
       filter: {
-        name: searchQuery || undefined
+        name: searchQuery || undefined,
+        status: statusFilter !== "all" ? statusFilter : undefined,
+        species: speciesFilter !== "all" ? speciesFilter : undefined,
       }
     },
   });
+
 
   const { state } = useLanguage();
   const lang = languages[state.language];
@@ -195,6 +199,15 @@ const CharacterList = ({ isInfiniteScroll }: Props) => {
       </button>
     </div>
   );
+  const handleResetFilters = () => {
+    setStatusFilter("all");
+    setSpeciesFilter("all");
+    setSearchQuery("");
+    setSortBy(null);
+    setSortDirection("asc");
+    setPage(1);
+  };
+
 
   return (
     <>
@@ -262,6 +275,14 @@ const CharacterList = ({ isInfiniteScroll }: Props) => {
                 <span>{sortDirection === "asc" ? "↑" : "↓"}</span>
               )}
             </button>
+            <button
+              className="reset-button"
+              onClick={handleResetFilters}
+              title={lang.resetFilters || "Reset all filters"}
+            >
+              {lang.resetFilters || "Reset Filters"}
+            </button>
+
           </div>
         </div>
 

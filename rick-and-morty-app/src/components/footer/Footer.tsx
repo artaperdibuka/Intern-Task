@@ -25,7 +25,7 @@ const Footer = () => {
                                 aria-label="LinkedIn">
                                 <FaLinkedin />
                             </a>
-                            <a href="https://github.com/ArtaPerdibuka"
+                            <a href="https://github.com/artaperdibuka/Intern-Task"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 aria-label="GitHub">

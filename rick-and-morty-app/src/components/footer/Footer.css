@@ -42,7 +42,7 @@
 .social-icons {
   display: flex;
   gap: 15px;
-  margin-left: 45px;
+  margin-left: 130px;
 }
 
 .social-icons a {
@@ -65,7 +65,7 @@
 .footer-center {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
   flex: 1;
   min-width: 250px;
 }

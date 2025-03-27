@@ -1,54 +1,79 @@
-# React + TypeScript + Vite
+# 🌌 Rick and Morty Universe Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![App Preview](./public/RickandMorty_sc.png) 
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [https://rickandmorty-eight-pearl.vercel.app/](https://rickandmorty-eight-pearl.vercel.app/)  
+📦 **Source Code**: [https://github.com/artaperdibuka/Intern-Task](https://github.com/artaperdibuka/Intern-Task)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Key Features
+- **Advanced Filtering**: By status (Alive/Dead/Unknown) and species (Human/Alien)
+- **Smart Search**: Instant results with debounce optimization
+- **Multi-language**: Ready for localization
+- **Performance**: Memoized components and efficient GraphQL queries
 
-## Expanding the ESLint configuration
+### 🔍 Advanced Character Browser
+- **Infinite Scroll** or pagination mode toggle
+- **Multi-criteria Filtering** (status: Alive/Dead/Unknown, species: Human/Alien)
+- **Smart Sorting** by name or origin (ascending/descending)
+- **Instant Search** with 300ms debounce for optimal performance
+- **One-click Reset** for all filters and sorting
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 🌐 Global Ready
+- **Multi-language Support** (English + easy to add others)
+- **Fully Responsive** design for all device sizes
+- **Accessibility** optimized interactive elements
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### ⚡ Performance Optimized
+- **Memoized components** with `useMemo`/`useCallback`
+- **Efficient GraphQL queries** with Apollo Client
+- **Type-safe** TypeScript implementation
+- **SCSS Modules** for scoped styling
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🛠 Tech Stack
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+| Category               | Technologies Used                     |
+|------------------------|---------------------------------------|
+| **Core Framework**     | React 19 + TypeScript                 |
+| **Build Tool**         | Vite (with SWC)                       |
+| **Styling**           | SCSS Modules                          |
+| **State Management**   | Apollo Client (GraphQL)               |
+| **Internationalization** | React Intl                        |
+| **UI Components**      | React Icons                           |
+| **Deployment**         | Vercel (with CI/CD)                   |
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (v18 or higher recommended)
+- npm (v9 or higher) or yarn
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/your-username/rick-and-morty-app.git
+
+# Navigate to project directory
+cd rick-and-morty-app
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+The output will be in the dist folder, ready for deployment.
+npm run preview
+Serves the built app locally, simulating a production environment.
+Useful for testing the production build before deployment.
+
+npm test
+Runs tests in interactive watch mode (if test scripts are set up).
+
+npm run lint
+Checks the code for potential issues and formatting errors using ESLint.
+
+npm run format
+Formats the code using Prettier to maintain consistency.
+
+📌 Additional Information
+For more details, check out the official Vite documentation and React documentation.
